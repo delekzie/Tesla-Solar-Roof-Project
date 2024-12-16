@@ -1,0 +1,1185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f4b400;
+}
+
+.menu a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* Hero Section */
+/* Video container */
+.background-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
+.background-video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send the video to the background */
+}
+
+/* Content container */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items horizontally */
+    justify-content: space-between; /* Distribute space evenly */
+    height: 80%; /* Take up 80% of the container's height */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Styling for the main title */
+.h1 h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Flex layout for the items */
+.heroine {
+    display: flex;
+    flex-direction: row; /* Arrange the items in a column */
+    gap: 2rem; /* Space between the elements */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual items in heroine */
+.heroine > div h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.heroine > div p {
+    font-size: 15px;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    .h1 h2 {
+        font-size: 2rem;
+    }
+
+    .heroine > div h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroine > div p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Container for the background video */
+
+.order{
+    padding: 13px 10px;
+    background: transparent;
+    color: #FFF;
+    outline: none;
+    border: 2px solid #fff;
+   width: 300px;
+   font-size: 1rem;
+   border-radius: 5px;
+   font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+
+
+.heroSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #f4b400;
+}
+
+
+/* second Section */
+.secondImage {
+    width: 100%; /* Ensure the container takes the full width of the page */
+    overflow: hidden; /* Hide any excess content */
+}
+
+.secondImage img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 500px; /* Maintain the aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    object-fit: cover; 
+}
+
+.secondItem {
+
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding: 20px 120px 20px 120px;
+}
+
+.secondDiv h1{
+	font-size: 18px;
+}
+.secondDiv h2{
+	font-size: 33px;
+}
+.secondDiv button{
+	padding: 0.5rem 3.5rem;
+    color: black; /* White text for contrast */
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+	margin-top: 8px;
+}
+
+.description-section{
+	width: 700px;
+	font-size: 15px;
+	color: grey;
+}
+
+
+/* responsiveness 2nd */
+
+/* Small Screen (less than 768px) */
+@media (max-width: 768px) {
+    .secondItem {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        padding: 20px 20px; /* Reduce padding */
+        gap: 1rem; /* Smaller gap between items */
+    }
+
+    .secondDiv h1 {
+        font-size: 16px; /* Smaller font size for h1 */
+    }
+
+    .secondDiv h2 {
+        font-size: 24px; /* Smaller font size for h2 */
+    }
+
+    .secondDiv button {
+        padding: 0.5rem 2rem; /* Smaller padding for buttons */
+        font-size: 0.9rem; /* Smaller font size for buttons */
+    }
+
+    .description-section {
+        width: 100%; /* Make the section take full width on small screens */
+        font-size: 13px; /* Smaller font size for descriptions */
+    }
+
+    .secondImage img {
+        height: 300px; /* Adjust the height of the image */
+        object-fit: contain; /* Ensure the image fits within the container */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .secondItem {
+        padding: 20px 50px; /* Adjust padding for medium screens */
+    }
+
+    .secondDiv h1 {
+        font-size: 17px; /* Slightly smaller font size for h1 */
+    }
+
+    .secondDiv h2 {
+        font-size: 28px; /* Slightly smaller font size for h2 */
+    }
+
+    .secondDiv button {
+        padding: 0.5rem 2.5rem; /* Slightly reduced padding */
+        font-size: 0.95rem; /* Slightly smaller font size */
+    }
+
+    .description-section {
+        width: 90%; /* Make the description section use 90% of the width */
+        font-size: 14px; /* Slightly reduced font size */
+    }
+
+    .secondImage img {
+        height: 400px; /* Adjust height for medium screens */
+        object-fit: cover; /* Maintain the cover property for the image */
+    }
+}
+
+
+
+
+/* third Section */
+
+
+
+/* 3rd responsivenss */
+
+/* Default styles */
+.thirdItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thirdContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    width: 550px;
+}
+
+.thirdContentDiv h1 {
+    font-size: 18px;
+}
+
+.thirdContentDiv h2 {
+    font-size: 28px;
+}
+
+.thirdContentDiv p {
+    font-size: 14px;
+    color: grey;
+    margin-top: 20px;
+}
+
+.thirdItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.thirdItemBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Small and Medium Screens */
+
+/* Small Screen (less than 768px) */
+@media (max-width: 768px) {
+    .thirdItem {
+        flex-direction: column; /* Stack content vertically on small screens */
+        padding: 20px; /* Adjust padding for small screens */
+    }
+
+    .thirdContent {
+        width: 100%; /* Make thirdContent take full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .thirdContentDiv h1 {
+        font-size: 16px; /* Adjust font size for h1 */
+    }
+
+    .thirdContentDiv h2 {
+        font-size: 24px; /* Adjust font size for h2 */
+    }
+
+    .thirdContentDiv p {
+        font-size: 12px; /* Adjust font size for paragraph */
+    }
+
+    .thirdItem img {
+        width: 100%; /* Ensure image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .thirdItem {
+        flex-direction: column; /* Stack content vertically on medium screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .thirdContent {
+        width: 90%; /* Make thirdContent take up most of the width */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .thirdContentDiv h1 {
+        font-size: 17px; /* Adjust font size for h1 */
+    }
+
+    .thirdContentDiv h2 {
+        font-size: 26px; /* Adjust font size for h2 */
+    }
+
+    .thirdContentDiv p {
+        font-size: 13px; /* Adjust font size for paragraph */
+    }
+
+    .thirdItem img {
+        width: 100%; /* Ensure image fits properly */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+
+.orderNow{
+	padding: 10px 2rem;
+    color: black; /* White text for contrast */
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+	width: 300px;
+	outline: none;
+    margin-top: 15px;
+}
+.learnMore{
+	padding: 10px 2rem;
+    color: black; /* White text for contrast */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+	margin-top: 15px;
+	width: 300px;
+	outline: none;
+	border: none;
+}
+
+/* fourthSection */
+
+.fourthItem{
+    display: flex;
+    margin-top: 2px;
+}
+
+.fourthDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 40px;
+    width: 550px;
+}
+
+.fourthDivProp h1{
+    font-size: 18px;
+}
+.fourthDivProp h2{
+    font-size: 28px;
+}
+.fourthDivProp p{
+    font-size: 14px;
+	color: grey;
+	margin-top: 20px
+}
+
+/* reponsiveness for the fourth div */
+
+@media (max-width: 768px) {
+    .fourthItem {
+        flex-direction: column; /* Stack the content vertically on small screens */
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    .fourthDiv {
+        width: 100%; /* Make content take up full width */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .fourthDivProp h1 {
+        font-size: 16px; /* Smaller font size for h1 */
+    }
+
+    .fourthDivProp h2 {
+        font-size: 24px; /* Smaller font size for h2 */
+    }
+
+    .fourthDivProp p {
+        font-size: 12px; /* Smaller font size for paragraph */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .fourthItem {
+        flex-direction: column; /* Stack the content vertically on medium screens */
+        padding: 20px 40px; /* Adjust padding for medium screens */
+    }
+
+    .fourthDiv {
+        width: 100%; /* Make content take up full width */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .fourthDivProp h1 {
+        font-size: 17px; /* Adjust font size for h1 */
+    }
+
+    .fourthDivProp h2 {
+        font-size: 26px; /* Adjust font size for h2 */
+    }
+
+    .fourthDivProp p {
+        font-size: 13px; /* Adjust font size for paragraph */
+    }
+}
+
+
+
+/* fifthItem */
+
+.fifthItem{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 20px 120px 20px 120px;
+}
+.fifthDiv h1{
+    font-size: 18px;
+}
+.fifthDiv h2{
+    font-size: 28px;
+}
+.fifthDiv button{
+    margin-top: 15px;
+}
+.fifthSection p{
+    width: 700px;
+	font-size: 15px;
+	color: grey;
+}
+
+
+
+/* reponsiveness for the 5th div */
+
+@media (max-width: 768px) {
+    .fifthItem {
+        flex-direction: column; /* Stack the content vertically on small screens */
+        padding: 20px; /* Adjust padding for small screens */
+        gap: 1rem; /* Adjust the gap for better spacing */
+    }
+
+    .fifthDiv {
+        width: 100%; /* Make content take up full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .fifthDiv h1 {
+        font-size: 16px; /* Smaller font size for h1 */
+    }
+
+    .fifthDiv h2 {
+        font-size: 24px; /* Smaller font size for h2 */
+    }
+
+    .fifthSection p {
+        width: 100%; /* Make paragraph take up full width */
+        font-size: 13px; /* Smaller font size for the paragraph */
+    }
+
+    .fifthDiv button {
+        width: 100%; /* Make button take up full width */
+        font-size: 1rem; /* Adjust font size for buttons */
+        padding: 12px; /* Adjust button padding */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .fifthItem {
+        flex-direction: column; /* Stack the content vertically on medium screens */
+        padding: 20px 40px; /* Adjust padding for medium screens */
+        gap: 1.5rem; /* Slightly reduced gap for medium screens */
+    }
+
+    .fifthDiv {
+        width: 100%; /* Make content take up full width */
+        padding: 25px; /* Adjust padding */
+    }
+
+    .fifthDiv h1 {
+        font-size: 17px; /* Adjust font size for h1 */
+    }
+
+    .fifthDiv h2 {
+        font-size: 26px; /* Adjust font size for h2 */
+    }
+
+    .fifthSection p {
+        width: 100%; /* Make paragraph take up full width */
+        font-size: 14px; /* Slightly smaller font size for the paragraph */
+    }
+
+    .fifthDiv button {
+        width: 100%; /* Make button take up full width */
+        font-size: 1rem; /* Adjust font size for buttons */
+        padding: 14px; /* Adjust padding for medium screens */
+    }
+}
+
+
+
+/* sixthItem */
+
+.video-container {
+    width: 100%;
+    max-width: 1350px; /* Optional max width for larger screens */
+    margin: 0 auto; /* Center the video horizontally */
+    overflow: hidden; /* Prevent overflow */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.sixthItem{
+    width: 850px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+.sixthDiv h1{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.sixthDiv p{
+   font-size: 14px;
+   margin-top: 10px;
+}
+.sixthDiv{
+   width: 370px;
+}
+
+/* reponsivess for the 6th div */
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        padding: 10px; /* Add padding for smaller screens */
+        margin: 0 auto;
+        border-radius: 0; /* Remove border-radius for smaller screens if needed */
+    }
+
+    .sixthItem {
+        width: 100%; /* Set full width for small screens */
+        flex-direction: column; /* Stack content vertically */
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .sixthDiv {
+        width: 100%; /* Make the sixthDiv take full width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .sixthDiv h1 {
+        font-size: 14px; /* Reduce font size for h1 */
+    }
+
+    .sixthDiv p {
+        font-size: 12px; /* Reduce font size for paragraph */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .video-container {
+        width: 100%;
+        padding: 15px; /* Adjust padding for medium screens */
+        margin: 0 auto;
+    }
+
+    .sixthItem {
+        width: 100%; /* Set full width for medium screens */
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .sixthDiv {
+        width: 90%; /* Make the sixthDiv take up most of the width */
+    }
+
+    .sixthDiv h1 {
+        font-size: 15px; /* Adjust font size for h1 */
+    }
+
+    .sixthDiv p {
+        font-size: 13px; /* Adjust font size for paragraph */
+    }
+}
+
+/* .seventhDiv */
+
+.seventhItem{
+    display: flex;
+}
+.seventhDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 40px;
+    width: 550px;
+}
+.seventhImage {
+    width: 100%; /* Ensure the container takes the full width of the page */
+    overflow: hidden; /* Hide any excess content */
+}
+.seventhImage img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    object-fit: cover; 
+}
+.seventhDivProp h1{
+    font-size: 18px;
+}
+.seventhDivProp h2{
+    font-size: 28px;
+}
+.seventhDivProp p{
+    font-size: 14px;
+	color: grey;
+
+}
+
+/* responsiveness for the 7thdiv */
+
+@media (max-width: 768px) {
+    .seventhItem {
+        flex-direction: column; /* Stack content vertically on small screens */
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    .seventhDiv {
+        width: 100%; /* Make .seventhDiv take full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .seventhDivProp h1 {
+        font-size: 16px; /* Smaller font size for h1 */
+    }
+
+    .seventhDivProp h2 {
+        font-size: 24px; /* Smaller font size for h2 */
+    }
+
+    .seventhDivProp p {
+        font-size: 12px; /* Smaller font size for paragraph */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .seventhItem {
+        flex-direction: column; /* Stack content vertically on medium screens */
+        padding: 20px; /* Adjust padding for medium screens */
+    }
+
+    .seventhDiv {
+        width: 90%; /* Make .seventhDiv take up most of the width */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .seventhDivProp h1 {
+        font-size: 17px; /* Adjust font size for h1 */
+    }
+
+    .seventhDivProp h2 {
+        font-size: 26px; /* Adjust font size for h2 */
+    }
+
+    .seventhDivProp p {
+        font-size: 13px; /* Adjust font size for paragraph */
+    }
+}
+
+
+
+
+
+/* eightDiv */
+
+.eigthImg img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.eightDiv{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+	padding: 20px 130px 20px 130px;
+    color: white;
+    background-color: #000;
+}
+
+ .eightSection{
+    width: 700px;
+	font-size: 15px;
+}
+.eightProp h1{
+    font-size: 18px;
+}
+.eightProp h2{
+    font-size: 28px;
+}
+.eightProp button{
+margin-top: 10px;
+}
+
+/* reponsiveness for 8thdiv */
+
+@media (max-width: 768px) {
+    .eightDiv {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        padding: 20px 30px;
+    }
+
+    .eightSection {
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 13px; /* Smaller font size for small screens */
+    }
+
+    .eightProp h1 {
+        font-size: 16px; /* Adjust h1 font size */
+    }
+
+    .eightProp h2 {
+        font-size: 24px; /* Adjust h2 font size */
+    }
+
+    .eightProp button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+/* Medium Screen (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .eightDiv {
+        padding: 20px 60px;
+    }
+
+    .eightSection {
+        width: 90%; /* Use most of the available width on medium screens */
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+
+    .eightProp h1 {
+        font-size: 17px; /* Adjust h1 font size */
+    }
+
+    .eightProp h2 {
+        font-size: 26px; /* Adjust h2 font size */
+    }
+}
+
+
+/* ninthItem */
+
+.ninthItem{
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.part1Div hr{
+    width: 40px;
+    font-weight: 400;
+
+}
+.ninthItem img{
+    width: 700px;
+    height: auto;
+}
+.ninthDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.part1Div{
+    width: 210px;
+    margin-top: 2rem;
+}
+.part1Div h1{
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+.part1Div p{
+    font-size: 12px;
+}
+
+/* 
+reponsiveness for the ninth section */
+
+@media (max-width: 992px) {
+    .ninthItem {
+        flex-direction: column; /* Stack elements vertically */
+        padding-top: 4rem; /* Adjust padding */
+        padding-bottom: 4rem;
+    }
+
+    .ninthItem img {
+        width: 500px; /* Reduce image size for better fit */
+    }
+
+    .part1Div {
+        width: 180px; /* Adjust width */
+        margin-top: 1.5rem;
+    }
+
+    .part1Div h1 {
+        font-size: 13px; /* Slightly smaller font size */
+    }
+
+    .part1Div p {
+        font-size: 11px;
+    }
+
+    .ninthDiv {
+        flex-direction: column; /* Stack elements */
+        gap: 1rem; /* Reduce gap between elements */
+    }
+}
+
+/* Small Screens (Below 768px) */
+@media (max-width: 768px) {
+    .ninthItem {
+        flex-direction: column; /* Stack elements */
+        padding: 3rem 1rem; /* Adjust padding */
+        text-align: center; /* Center-align text */
+    }
+
+    .ninthItem img {
+        width: 100%; /* Make image responsive */
+        max-width: 300px; /* Restrict max width */
+        margin-bottom: 1.5rem; /* Add spacing below the image */
+    }
+
+    .part1Div {
+        width: 100%; /* Full width */
+        margin-top: 1rem;
+    }
+
+    .part1Div h1 {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .part1Div p {
+        font-size: 10px; /* Smaller paragraph font size */
+    }
+
+    .ninthDiv {
+        flex-direction: column; /* Stack items */
+        gap: 1rem; /* Space between items */
+    }
+}
+
+
+
+
+
+/* tenthItem */
+
+.tenthItem{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+}
+
+.tenthItem h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.tenthItem p{
+text-decoration: underline;
+margin-top: 15px;
+font-weight: bold;
+}
+.btn{
+    padding: 13px 10px;
+    border: 2px solid #fff;
+    width: 300px;
+    font-size: 1rem;
+    background: none;
+    color: #FFF;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+    border-radius: 5px;
+}
+.btn1{
+    padding: 13px 10px;
+    background: #111;
+    color: #FFF;
+    outline: none;
+    border: none;
+   width: 300px;
+   font-size: 1rem;
+   margin-top: 15px;
+   border-radius: 5px;
+   font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.orderNow1{
+    padding: 13px 10px;
+    border: 3px solid #fff;
+    background: none;
+    color: #FFF;
+    outline: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s;
+	width: 300px;
+	outline: none;
+}
+
+@media (max-width: 992px) {
+    .tenthItem {
+        padding: 7rem 0; /* Reduce padding for medium screens */
+    }
+
+    .tenthItem h1 {
+        font-size: 24px; /* Adjust font size for better fit */
+    }
+
+    .btn, .btn1, .orderNow1 {
+        width: 250px; /* Reduce button width */
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+}
+
+/* Small Screens (Below 768px) */
+@media (max-width: 768px) {
+    .tenthItem {
+        padding: 5rem 0; /* Further reduce padding */
+        text-align: center; /* Center align content for small screens */
+    }
+
+    .tenthItem h1 {
+        font-size: 20px; /* Smaller headline font size */
+    }
+
+    .tenthItem p {
+        font-size: 0.9rem; /* Smaller font size for paragraph */
+    }
+
+    .btn, .btn1, .orderNow1 {
+        width: 200px; /* Shrink button width */
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+
+
+/* reponsiveness navbar and footer */
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .heroine {
+        flex-direction: column;
+    }
+
+    .heroine > div h1 {
+        font-size: 1.8rem;
+    }
+
+    .heroine > div p {
+        font-size: 1rem;
+    }
+
+    .order {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .background-video-container {
+        height: 80vh;
+    }
+
+    .h1 h2 {
+        font-size: 1.8rem;
+    }
+
+    .heroine > div h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroine > div p {
+        font-size: 0.9rem;
+    }
+
+    .order {
+        width: 200px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
